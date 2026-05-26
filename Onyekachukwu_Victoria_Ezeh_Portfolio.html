@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Onyekachukwu Victoria Ezeh &mdash; Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--navy:#1a2a4a;--accent:#2e6da4;--accent2:#e8f3fc;--gold:#c9a84c;--light:#f8f9fb;--white:#ffffff;--text:#222;--muted:#666;--border:#dde3ec;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--white);}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(26,42,74,0.97);backdrop-filter:blur(8px);padding:0 2rem;}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px;}
+.nav-brand{font-family:'Playfair Display',serif;color:#fff;font-size:1rem;font-weight:700;letter-spacing:0.03em;}
+.nav-links{display:flex;gap:1.6rem;list-style:none;}
+.nav-links a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s;}
+.nav-links a:hover{color:#fff;}
+.hero{min-height:100vh;background:linear-gradient(135deg,#1a2a4a 0%,#243a61 60%,#1e3355 100%);display:flex;align-items:center;justify-content:center;text-align:center;padding:6rem 2rem 4rem;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 20% 80%,rgba(46,109,164,0.2) 0%,transparent 50%),radial-gradient(circle at 80% 20%,rgba(201,168,76,0.08) 0%,transparent 40%);}
+.hero-inner{position:relative;max-width:720px;}
+.hero-badge{display:inline-block;background:rgba(46,109,164,0.25);border:1px solid rgba(46,109,164,0.5);color:#9fc8e8;font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;padding:0.35rem 1rem;border-radius:2rem;margin-bottom:1.5rem;}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,3.8rem);color:#fff;line-height:1.15;margin-bottom:1rem;}
+.hero h1 span{color:#c9a84c;}
+.hero-sub{font-size:1rem;color:rgba(255,255,255,0.65);line-height:1.7;max-width:520px;margin:0 auto 2rem;}
+.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+.btn-primary{background:#2e6da4;color:#fff;padding:0.7rem 1.8rem;border-radius:0.4rem;text-decoration:none;font-size:0.88rem;font-weight:500;transition:background 0.2s,transform 0.15s;}
+.btn-primary:hover{background:#245d8e;transform:translateY(-1px);}
+.btn-outline{border:1.5px solid rgba(255,255,255,0.35);color:#fff;padding:0.7rem 1.8rem;border-radius:0.4rem;text-decoration:none;font-size:0.88rem;font-weight:400;transition:border-color 0.2s,background 0.2s;}
+.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,0.07);}
+.hero-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);color:rgba(255,255,255,0.4);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:0.4rem;}
+.scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,rgba(255,255,255,0.4),transparent);}
+section{padding:5rem 2rem;}
+.container{max-width:1100px;margin:0 auto;}
+.section-label{font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:#2e6da4;font-weight:500;margin-bottom:0.5rem;}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.4rem);color:#1a2a4a;margin-bottom:0.5rem;line-height:1.2;}
+.section-line{width:48px;height:3px;background:#c9a84c;border-radius:2px;margin-bottom:2.5rem;}
+#about{background:#f8f9fb;}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+.about-avatar{width:260px;height:260px;border-radius:50%;background:linear-gradient(135deg,#1a2a4a,#2e6da4);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:5rem;color:#fff;margin:0 auto;box-shadow:0 20px 50px rgba(26,42,74,0.2);}
+.about-text p{font-size:0.97rem;line-height:1.8;color:#444;margin-bottom:1rem;}
+.about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem;}
+.stat{background:#fff;border:1px solid #dde3ec;border-radius:0.75rem;padding:1rem;text-align:center;}
+.stat-num{font-family:'Playfair Display',serif;font-size:1.6rem;color:#1a2a4a;font-weight:700;}
+.stat-lbl{font-size:0.72rem;color:#666;margin-top:0.2rem;}
+#skills{background:#fff;}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;}
+.skill-card{background:#f8f9fb;border:1px solid #dde3ec;border-radius:0.75rem;padding:1.4rem 1.6rem;}
+.skill-name{font-size:0.88rem;font-weight:500;color:#1a2a4a;margin-bottom:0.6rem;}
+.skill-bar{height:6px;background:#dde3ec;border-radius:3px;overflow:hidden;}
+.skill-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,#2e6da4,#4a90d4);}
+#services{background:#f8f9fb;}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.5rem;}
+.service-card{background:#fff;border:1px solid #dde3ec;border-radius:0.9rem;padding:1.8rem;transition:box-shadow 0.2s,transform 0.2s;}
+.service-card:hover{box-shadow:0 8px 30px rgba(26,42,74,0.1);transform:translateY(-3px);}
+.service-icon{width:44px;height:44px;border-radius:0.6rem;background:#e8f3fc;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;font-size:1.2rem;}
+.service-card h3{font-size:1rem;font-weight:500;color:#1a2a4a;margin-bottom:0.6rem;}
+.service-card p{font-size:0.86rem;color:#666;line-height:1.7;}
+.service-card ul{margin-top:0.8rem;list-style:none;}
+.service-card ul li{font-size:0.84rem;color:#555;padding:0.2rem 0;padding-left:1.2rem;position:relative;}
+.service-card ul li::before{content:'checkmark';content:'\2713';position:absolute;left:0;color:#2e6da4;font-weight:700;}
+#tools{background:#fff;}
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:1rem;}
+.tool-pill{background:#f8f9fb;border:1px solid #dde3ec;border-radius:0.6rem;padding:0.8rem 0.5rem;text-align:center;font-size:0.8rem;font-weight:500;color:#1a2a4a;transition:border-color 0.2s,background 0.2s;}
+.tool-pill:hover{border-color:#2e6da4;background:#e8f3fc;}
+#experience{background:#f8f9fb;}
+.timeline{position:relative;padding-left:2rem;}
+.timeline::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:#dde3ec;}
+.tl-item{position:relative;margin-bottom:2.5rem;}
+.tl-dot{position:absolute;left:-2.45rem;top:0.25rem;width:14px;height:14px;border-radius:50%;background:#2e6da4;border:3px solid #f8f9fb;box-shadow:0 0 0 2px #2e6da4;}
+.tl-date{font-size:0.75rem;color:#2e6da4;font-weight:500;letter-spacing:0.06em;margin-bottom:0.3rem;}
+.tl-role{font-size:1rem;font-weight:500;color:#1a2a4a;margin-bottom:0.15rem;}
+.tl-org{font-size:0.85rem;color:#666;font-style:italic;margin-bottom:0.6rem;}
+.tl-points{list-style:none;}
+.tl-points li{font-size:0.86rem;color:#555;line-height:1.7;padding-left:1rem;position:relative;margin-bottom:0.3rem;}
+.tl-points li::before{content:'\203A';position:absolute;left:0;color:#2e6da4;font-weight:700;}
+#certs{background:#fff;}
+.cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.2rem;}
+.cert-card{background:#f8f9fb;border:1px solid #dde3ec;border-radius:0.75rem;padding:1.4rem;display:flex;align-items:flex-start;gap:1rem;}
+.cert-icon{width:40px;height:40px;background:#1a2a4a;border-radius:0.5rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.1rem;}
+.cert-card h4{font-size:0.9rem;font-weight:500;color:#1a2a4a;margin-bottom:0.2rem;}
+.cert-card p{font-size:0.8rem;color:#666;}
+.lead-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem;}
+.lead-card{background:#f8f9fb;border:1px solid #dde3ec;border-radius:0.75rem;padding:1.4rem;}
+.lead-card h4{font-size:0.92rem;font-weight:500;color:#1a2a4a;margin-bottom:0.2rem;}
+.lead-card .lead-org{font-size:0.8rem;color:#2e6da4;margin-bottom:0.6rem;}
+.lead-card p{font-size:0.84rem;color:#555;line-height:1.6;}
+#contact{background:#1a2a4a;color:#fff;}
+#contact .section-label{color:#9fc8e8;}
+#contact .section-title{color:#fff;}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
+.contact-info p{font-size:0.96rem;color:rgba(255,255,255,0.7);line-height:1.8;margin-bottom:2rem;}
+.contact-item{display:flex;align-items:center;gap:0.8rem;margin-bottom:1rem;}
+.contact-item-icon{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;font-size:0.9rem;flex-shrink:0;}
+.contact-item span{font-size:0.88rem;color:rgba(255,255,255,0.8);}
+.contact-form{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:1rem;padding:2rem;}
+.form-group{margin-bottom:1.2rem;}
+.form-group label{display:block;font-size:0.78rem;color:rgba(255,255,255,0.6);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:0.4rem;}
+.form-group input,.form-group textarea{width:100%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:0.5rem;padding:0.65rem 0.9rem;color:#fff;font-family:'DM Sans',sans-serif;font-size:0.9rem;outline:none;transition:border-color 0.2s;}
+.form-group input:focus,.form-group textarea:focus{border-color:rgba(255,255,255,0.4);}
+.form-group textarea{resize:vertical;min-height:110px;}
+.form-group input::placeholder,.form-group textarea::placeholder{color:rgba(255,255,255,0.3);}
+.submit-btn{width:100%;background:#c9a84c;color:#1a2a4a;border:none;padding:0.8rem;border-radius:0.5rem;font-family:'DM Sans',sans-serif;font-size:0.92rem;font-weight:500;cursor:pointer;transition:background 0.2s,transform 0.15s;}
+.submit-btn:hover{background:#d4af60;transform:translateY(-1px);}
+footer{background:#111827;padding:1.5rem 2rem;text-align:center;}
+footer p{font-size:0.78rem;color:rgba(255,255,255,0.4);}
+@media(max-width:768px){.about-grid,.contact-grid{grid-template-columns:1fr;}.about-avatar{width:180px;height:180px;font-size:3.5rem;}.nav-links{display:none;}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <span class="nav-brand">OVE</span>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#certs">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-badge">Available for Hire</div>
+    <h1>Your Dedicated<br/><span>Professional Assistant</span></h1>
+    <p class="hero-sub">HR Professional &middot; Virtual Assistant &middot; Social Media Manager &mdash; bringing structure, reliability, and results to every collaboration.</p>
+    <div class="hero-btns">
+      <a href="#services" class="btn-primary">View My Services</a>
+      <a href="#contact" class="btn-outline">Get In Touch</a>
+    </div>
+  </div>
+  <div class="hero-scroll"><div class="scroll-line"></div>scroll</div>
+</section>
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div style="text-align:center;"><div class="about-avatar">OVE</div></div>
+      <div class="about-text">
+        <p class="section-label">About Me</p>
+        <h2 class="section-title">Onyekachukwu Victoria Ezeh</h2>
+        <div class="section-line"></div>
+        <p>Results-oriented administrative and HR professional with 3+ years of experience spanning virtual assistance, human resources, and procurement. I bring structure, clarity, and proactive communication to every role I take on.</p>
+        <p>Skilled in social media management, payroll review, email marketing, and operational coordination &mdash; I thrive in both independent and collaborative environments. Currently completing a BSc in Counseling and Human Development at the University of Ibadan.</p>
+        <div class="about-stats">
+          <div class="stat"><div class="stat-num">3+</div><div class="stat-lbl">Years Experience</div></div>
+          <div class="stat"><div class="stat-num">4</div><div class="stat-lbl">Roles Held</div></div>
+          <div class="stat"><div class="stat-num">20+</div><div class="stat-lbl">Interns Managed</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="skills">
+  <div class="container">
+    <p class="section-label">What I Bring</p>
+    <h2 class="section-title">My Skills</h2>
+    <div class="section-line"></div>
+    <div class="skills-grid">
+      <div class="skill-card"><div class="skill-name">Microsoft Office Suite</div><div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div></div>
+      <div class="skill-card"><div class="skill-name">Google Workspace</div><div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div></div>
+      <div class="skill-card"><div class="skill-name">Social Media Management</div><div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div></div>
+      <div class="skill-card"><div class="skill-name">Email Marketing (Mailchimp)</div><div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div></div>
+      <div class="skill-card"><div class="skill-name">Canva Design</div><div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div></div>
+      <div class="skill-card"><div class="skill-name">Procurement Management</div><div class="skill-bar"><div class="skill-fill" style="width:82%"></div></div></div>
+      <div class="skill-card"><div class="skill-name">Payroll Processing</div><div class="skill-bar"><div class="skill-fill" style="width:78%"></div></div></div>
+      <div class="skill-card"><div class="skill-name">Bookkeeping &amp; Record Keeping</div><div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div></div>
+      <div class="skill-card"><div class="skill-name">CRM Tools</div><div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div></div>
+      <div class="skill-card"><div class="skill-name">Sales Funnel Management</div><div class="skill-bar"><div class="skill-fill" style="width:76%"></div></div></div>
+    </div>
+  </div>
+</section>
+<section id="services">
+  <div class="container">
+    <p class="section-label">How I Can Help</p>
+    <h2 class="section-title">My Services</h2>
+    <div class="section-line"></div>
+    <div class="services-grid">
+      <div class="service-card"><div class="service-icon">&#128203;</div><h3>HR &amp; Administrative Support</h3><p>Efficient, organized admin support to keep your operations running smoothly.</p><ul><li>Staff file management &amp; documentation</li><li>Payroll review &amp; contingent worker records</li><li>Intern &amp; team coordination</li><li>Day-to-day business operations</li></ul></div>
+      <div class="service-card"><div class="service-icon">&#128241;</div><h3>Social Media Management</h3><p>Strategic, consistent content that grows your brand's digital presence.</p><ul><li>Content scheduling &amp; calendar planning</li><li>Ad creation &amp; copywriting</li><li>Community engagement</li><li>Performance reporting</li></ul></div>
+      <div class="service-card"><div class="service-icon">&#9993;&#65039;</div><h3>Email Marketing</h3><p>Targeted campaigns that connect with your audience and convert.</p><ul><li>Campaign design &amp; scheduling</li><li>Subscriber list management</li><li>Landing page &amp; sales page creation</li><li>Performance tracking</li></ul></div>
+      <div class="service-card"><div class="service-icon">&#128722;</div><h3>Procurement &amp; Operations</h3><p>Reliable procurement and cash flow tracking for your business.</p><ul><li>Supply sourcing &amp; purchasing</li><li>Daily inflow/outflow records</li><li>Order fulfilment coordination</li><li>Vendor communication</li></ul></div>
+      <div class="service-card"><div class="service-icon">&#128421;&#65039;</div><h3>Virtual Assistance</h3><p>Dependable virtual support tailored to your unique business needs.</p><ul><li>Calendar &amp; inbox management</li><li>Data entry &amp; research</li><li>Document preparation</li><li>Client communications</li></ul></div>
+      <div class="service-card"><div class="service-icon">&#127912;</div><h3>Basic Design (Canva)</h3><p>Clean, brand-aligned graphics to communicate effectively with your audience.</p><ul><li>Social media graphics &amp; carousels</li><li>Flyers &amp; marketing materials</li><li>Branded templates</li><li>Story &amp; post designs</li></ul></div>
+    </div>
+  </div>
+</section>
+<section id="experience">
+  <div class="container">
+    <p class="section-label">Career Journey</p>
+    <h2 class="section-title">Work Experience</h2>
+    <div class="section-line"></div>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-date">Aug 2024 &ndash; Sept 2024</div><div class="tl-role">Human Resource Intern</div><div class="tl-org">Rand Merchant Bank</div><ul class="tl-points"><li>Maintained accurate staff documentation, ensuring all records were readily accessible for HR operations.</li><li>Collaborated with line manager on monthly payroll review for contingent workers.</li><li>Served as primary point of contact for 20+ interns, coordinating communications throughout their placement.</li></ul></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-date">Nov 2023 &ndash; Aug 2024</div><div class="tl-role">Virtual Assistant</div><div class="tl-org">Topshelf Wedding Planners</div><ul class="tl-points"><li>Designed and managed email marketing campaigns, improving client engagement through strategic scheduling.</li><li>Built and published landing pages and sales pages, supporting the brand's digital marketing presence.</li><li>Managed social media accounts, scheduling content and creating ads to grow audience reach.</li></ul></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-date">Nov 2021 &ndash; Feb 2023</div><div class="tl-role">Personal Assistant</div><div class="tl-org">Ronniex Cakes and Events</div><ul class="tl-points"><li>Managed all social media channels and day-to-day business operations.</li><li>Coordinated end-to-end client order fulfilment &mdash; from intake through production to delivery.</li><li>Assisted with cake production and decoration, maintaining quality standards for client orders.</li></ul></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-date">December 2019</div><div class="tl-role">Procurement Officer</div><div class="tl-org">Beni-Ere Entertainment</div><ul class="tl-points"><li>Managed daily procurement of supplies for a team of 20+, ensuring timely availability.</li><li>Maintained accurate daily records of all cash inflows and outflows.</li></ul></div>
+    </div>
+  </div>
+</section>
+<section id="tools">
+  <div class="container">
+    <p class="section-label">My Toolkit</p>
+    <h2 class="section-title">Tools I Use</h2>
+    <div class="section-line"></div>
+    <div class="tools-grid">
+      <div class="tool-pill">Microsoft Office</div><div class="tool-pill">Google Workspace</div><div class="tool-pill">Canva</div><div class="tool-pill">Mailchimp</div><div class="tool-pill">Buffer</div><div class="tool-pill">Hootsuite</div><div class="tool-pill">Notion</div><div class="tool-pill">Slack</div><div class="tool-pill">Zoom</div><div class="tool-pill">Calendly</div><div class="tool-pill">CRM Tools</div><div class="tool-pill">Grammarly</div>
+    </div>
+  </div>
+</section>
+<section id="certs">
+  <div class="container">
+    <p class="section-label">Credentials</p>
+    <h2 class="section-title">Certifications &amp; Education</h2>
+    <div class="section-line"></div>
+    <div class="cert-grid">
+      <div class="cert-card"><div class="cert-icon">&#127891;</div><div><h4>BSc. Counseling &amp; Human Development (In View)</h4><p>University of Ibadan &middot; CGPA 3.0 / 4.0 &middot; 2021&ndash;Present</p></div></div>
+      <div class="cert-card"><div class="cert-icon">&#127979;</div><div><h4>West African Senior School Certificate</h4><p>Federal Government Girls' College, Oyo &middot; 2014&ndash;2020</p></div></div>
+      <div class="cert-card"><div class="cert-icon">&#127760;</div><div><h4>Certificate of Course Completion</h4><p>Cisco Networking Academy &middot; 2017</p></div></div>
+    </div>
+    <p class="section-label" style="margin-top:3rem;">Leadership</p>
+    <h2 class="section-title">Leadership Experience</h2>
+    <div class="section-line"></div>
+    <div class="lead-grid">
+      <div class="lead-card"><h4>Press Prefect</h4><div class="lead-org">FGGC Oyo &middot; 2019&ndash;2020</div><p>Led the student editorial committee responsible for the 2020 School Magazine. Coordinated school-wide communications alongside fellow prefects.</p></div>
+      <div class="lead-card"><h4>Public Relations Officer &mdash; JETS Club</h4><div class="lead-org">FGGC Oyo &middot; 2019&ndash;2020</div><p>Managed internal and external communications for the club, ensuring timely dissemination of information to all members.</p></div>
+      <div class="lead-card"><h4>Class Prefect</h4><div class="lead-org">FGGC Oyo &middot; 2014&ndash;2020</div><p>Coordinated major class activities and represented the class in school-wide meetings for six consecutive years.</p></div>
+    </div>
+  </div>
+</section>
+<section id="contact">
+  <div class="container">
+    <p class="section-label">Let's Connect</p>
+    <h2 class="section-title">Get In Touch</h2>
+    <div class="section-line" style="background:#c9a84c;"></div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p>Looking for a dedicated professional to support your business? I'd love to hear from you. Whether it's a quick question or a detailed brief &mdash; reach out!</p>
+        <div class="contact-item"><div class="contact-item-icon">&#128231;</div><span>onyekaezeh7@gmail.com</span></div>
+        <div class="contact-item"><div class="contact-item-icon">&#128222;</div><span>+234 906 950 4997</span></div>
+        <div class="contact-item"><div class="contact-item-icon">&#128205;</div><span>Lagos, Nigeria</span></div>
+        <div class="contact-item"><div class="contact-item-icon">&#128279;</div><span>LinkedIn: Onyeka Ezeh</span></div>
+      </div>
+      <div class="contact-form">
+        <div class="form-group"><label>Your Name</label><input type="text" placeholder="e.g. Chidi Okafor"/></div>
+        <div class="form-group"><label>Email Address</label><input type="email" placeholder="you@example.com"/></div>
+        <div class="form-group"><label>Message</label><textarea placeholder="Tell me how I can help you..."></textarea></div>
+        <button class="submit-btn">Send Message &rarr;</button>
+      </div>
+    </div>
+  </div>
+</section>
+<footer><p>&copy; 2026 Onyekachukwu Victoria Ezeh &middot; All rights reserved &middot; Built with care</p></footer>
+</body>
+</html>
